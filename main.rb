@@ -7,7 +7,7 @@ use Rack::Auth::Basic, 'Authentication required' do |username, password|
 end
 
 get '/' do
-  'Hello World!'
+  Dir.entries('public').join("\n")
 end
 
 post '/upload' do
